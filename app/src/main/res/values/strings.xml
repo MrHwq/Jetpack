@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Jetpack</string>
+    <string name="back_fragment_one">Back Fragment One</string>
+    <string name="go_fragment_three">Go Fragment Three</string>
+    <string name="first_fragment">第一个Fragment</string>
+    <string name="gofragmenttwo">gofragmenttwo</string>
+    <string name="three_fragment">第三个Fragment</string>
+    <string name="back_fragment">Back Fragment</string>
+    <string name="two_fragment">第二个Fragment</string>
+</resources>
