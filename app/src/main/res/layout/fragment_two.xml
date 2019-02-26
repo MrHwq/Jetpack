@@ -11,10 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:text="@string/two_fragment"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="124dp" />
+        tools:layout_editor_absoluteY="80dp" />
 
     <Button
         android:id="@+id/backFragmentOne"
@@ -22,19 +23,57 @@
         android:layout_height="wrap_content"
         android:text="@string/back_fragment_one"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <Button
         android:id="@+id/goFragmentThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="60dp"
         android:text="@string/go_fragment_three"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backFragmentOne" />
+
+    <TextView
+        android:id="@+id/mutable"
+        android:layout_width="361dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:text="测试mutable变化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goFragmentThree" />
+
+    <TextView
+        android:id="@+id/mutableforever"
+        android:layout_width="361dp"
+        android:layout_height="58dp"
+
+        android:layout_marginTop="84dp"
+        android:text="测试mutable ever变化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mutable" />
+
+    <TextView
+        android:id="@+id/observe"
+        android:layout_width="356dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="测试observe变化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mutableforever" />
 
 </android.support.constraint.ConstraintLayout>

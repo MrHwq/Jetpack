@@ -2,6 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    dataBinding {
+        enabled true
+    }
     defaultConfig {
         applicationId "com.hwqgooo.jetpack"
         minSdkVersion 21
@@ -9,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        buildConfigField "Boolean", "DEBUG", "true"
     }
     buildTypes {
         release {
@@ -25,12 +29,44 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:animated-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    def work_version = "1.0.0-alpha11"
-    implementation "android.arch.work:work-runtime:$work_version"
-    implementation "android.arch.work:work-firebase:$work_version"
 
-    def nav_version = "1.0.0-beta02"
+    implementation "android.arch.work:work-runtime:1.0.0-rc02"
+    implementation "android.arch.work:work-rxjava2:1.0.0-rc02"
+    implementation "android.arch.work:work-firebase:1.0.0-alpha11"
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    def nav_version = "1.0.0-rc01"
     implementation "android.arch.navigation:navigation-fragment:$nav_version"
     implementation "android.arch.navigation:navigation-ui:$nav_version"
+
+    def paging_version = "1.0.1"
+    implementation "android.arch.paging:runtime:$paging_version"
+    implementation "android.arch.paging:rxjava2:1.0.1"
+
+
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.4.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    // 刷新框架
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-20'//没有使用特殊Header，可以不加这行
+
+//    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha01'
 }

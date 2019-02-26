@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragmentOne"
-        android:name="com.hwqgooo.jetpack.FragmentOne"
+        android:name="com.hwqgooo.jetpack.navigation.FragmentOne"
         android:label="FragmentOne">
         <action
             android:id="@+id/action_fragmentOne_to_fragmentTwo"
@@ -14,21 +14,31 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentTwo"
-        android:name="com.hwqgooo.jetpack.FragmentTwo"
+        android:name="com.hwqgooo.jetpack.navigation.FragmentTwo"
         android:label="FragmentTwo">
         <action
             android:id="@+id/action_fragmentTwo_to_fragmentOne"
             app:destination="@id/fragmentOne" />
         <action
             android:id="@+id/action_fragmentTwo_to_fragmentThree"
-            app:destination="@id/nav_graph_page3" />
+            app:destination="@id/fragmentThree" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.hwqgooo.jetpack.navigation.FragmentThree"
+        android:label="FragmentThree">
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentFour"
+            app:destination="@id/nav_graph_page4" />
     </fragment>
     <navigation
-        android:id="@+id/nav_graph_page3"
-        app:startDestination="@id/fragmentThree">
+        android:id="@+id/nav_graph_page4"
+        app:startDestination="@id/fragmentFour">
+
         <fragment
-            android:id="@+id/fragmentThree"
-            android:name="com.hwqgooo.jetpack.FragmentThree"
-            android:label="FragmentThree" />
+            android:id="@+id/fragmentFour"
+            android:name="com.hwqgooo.jetpack.navigation.FragmentFour"
+            android:label="FragmentFour" />
     </navigation>
 </navigation>

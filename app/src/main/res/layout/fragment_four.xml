@@ -9,30 +9,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:text="@string/first_fragment"
+        android:text="@string/four_fragment"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="124dp" />
 
     <Button
-        android:id="@+id/gofragmenttwo"
+        android:id="@+id/back_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gofragmenttwo"
+        android:text="@string/back_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/animator"
-        android:layout_width="78dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="104dp"
-        android:src="@android:drawable/ic_menu_share"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gofragmenttwo" />
 
 </android.support.constraint.ConstraintLayout>
