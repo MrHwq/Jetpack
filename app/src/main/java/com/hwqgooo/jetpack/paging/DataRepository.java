@@ -10,14 +10,15 @@ public class DataRepository {
 
     public DataRepository() {
         super();
-        for (int i = 0; i < 100; ++i) {
+        for (int i = 0; i < 40; ++i) {
             data.add(new DataBean(i, "ID:" + i + "Name:" + Math.random()));
+            data.add(new DataBeanImage(i, "ID:" + i + "Name:" + Math.random()));
         }
     }
 
     public List<DataBean> loadData(int size) {
         try {
-            return data.subList(0, size);
+            return data.subList(0, size < data.size() ? size : data.size());
         } catch (Exception e) {
             return null;
         }

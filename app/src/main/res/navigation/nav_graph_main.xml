@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_fragmentOne_to_fragmentTwo"
             app:destination="@id/fragmentTwo" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://cashdog.com/sendmoney" />
     </fragment>
     <fragment
         android:id="@+id/fragmentTwo"

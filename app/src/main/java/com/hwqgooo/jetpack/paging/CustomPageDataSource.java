@@ -21,7 +21,7 @@ public class CustomPageDataSource extends PageKeyedDataSource<Integer, DataBean>
                             @NonNull LoadInitialCallback<Integer, DataBean> callback) {
         Logger.i("initial size:%d", params.requestedLoadSize);
         List<DataBean> data = dataRepository.loadData(params.requestedLoadSize);
-        callback.onResult(data, null, 1);
+        callback.onResult(data, null, 2);
     }
 
     @Override
